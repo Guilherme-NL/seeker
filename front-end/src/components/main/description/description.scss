@@ -1,0 +1,22 @@
+.description-container {
+  display: flex;
+  justify-content: space-between;
+
+  span {
+    font-weight: bold;
+  }
+}
+
+.move-description {
+  padding: 20px;
+
+  p {
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+}
+
+.poster {
+  padding: 20px;
+  width: 250px;
+}
