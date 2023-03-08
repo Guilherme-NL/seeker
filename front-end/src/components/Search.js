@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Button from "./Button";
 
 export default function Search() {
   return (
@@ -12,8 +13,8 @@ export default function Search() {
       </AppTitle>
       <SearchBar>
         <input></input>
-        <button>Search</button>
-        <button>Reset</button>
+        <Button label="Search" />
+        <Button label="Reset" />
       </SearchBar>
     </Container>
   );
