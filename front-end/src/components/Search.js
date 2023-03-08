@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export default function Search() {
   return (
-    <>
+    <Container>
       <AppTitle>
         <h1>Movie Finder</h1>
         <p>
@@ -15,9 +15,13 @@ export default function Search() {
         <button>Search</button>
         <button>Reset</button>
       </SearchBar>
-    </>
+    </Container>
   );
 }
+
+const Container = styled.div`
+  margin: 110px 0 110px 0;
+`;
 
 const SearchBar = styled.div`
   display: flex;
@@ -25,7 +29,7 @@ const SearchBar = styled.div`
 `;
 
 const AppTitle = styled.div`
-  margin: 110px 0 40px 0;
+  margin-bottom: 40px;
   padding: 0 20px;
   width: 100%;
   height: auto;
