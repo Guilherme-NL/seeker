@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Button from "./Button";
+import Input from "./Input";
 
 export default function Search() {
   return (
@@ -12,7 +13,7 @@ export default function Search() {
         </p>
       </AppTitle>
       <SearchBar>
-        <input></input>
+        <Input />
         <Button label="Search" />
         <Button label="Reset" />
       </SearchBar>
@@ -26,7 +27,10 @@ const Container = styled.div`
 
 const SearchBar = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  Button {
+    margin-left: 30px;
+  }
 `;
 
 const AppTitle = styled.div`

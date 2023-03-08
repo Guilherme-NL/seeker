@@ -7,8 +7,9 @@ export default function Button({ label, onClick }) {
 const CustomButton = styled.button`
   border-radius: 5px;
   height: 30px;
-  width: 150px;
+  width: 50%;
   border: none;
   background-color: gray;
   color: white;
+  cursor: pointer;
 `;
