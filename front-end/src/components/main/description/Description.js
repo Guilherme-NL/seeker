@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Rating } from "react-simple-star-rating";
-
+import { Button } from "@ui5/webcomponents-react";
 import "./description.scss";
 
 export default function Description() {
@@ -26,6 +26,9 @@ export default function Description() {
             readonly={true}
           />
         </p>
+        <Button className="custom-button-heart" icon="heart" iconEnd>
+          Favorite
+        </Button>
       </div>
       <img className="poster" src={movieInfo.Poster} alt="move" />
     </div>
