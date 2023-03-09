@@ -1,26 +1,16 @@
 import { Injectable } from '@nestjs/common';
+import axios from 'axios';
 import { CreateMovieDto } from './dto/create-movie.dto';
 import { UpdateMovieDto } from './dto/update-movie.dto';
 
 @Injectable()
 export class MovieService {
-  create(createMovieDto: CreateMovieDto) {
-    return 'This action adds a new movie';
-  }
-
-  findAll() {
-    return `This action returns all movie`;
-  }
-
-  findOne(id: number) {
-    return `This action returns a #${id} movie`;
-  }
-
-  update(id: number, updateMovieDto: UpdateMovieDto) {
-    return `This action updates a #${id} movie`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} movie`;
+  async findOne(movieName: string) {
+    console.log(movieName);
+    const url = `https://www.omdbapi.com/?apikey=33a0cf2e&t=${movieName}`;
+    const response = await axios.get(url);
+    const data = response.data;
+    console.log(data);
+    return data;
   }
 }
