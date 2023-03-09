@@ -8,13 +8,15 @@ import "./search-form.scss";
 import React from "react";
 import axios from "axios";
 
+const API_URL = process.env.REACT_APP_URL;
+
 export default function SearchForm() {
   const dispatch = useDispatch();
   const [movieName, setMovieName] = React.useState("");
 
   function sendMovieName(e) {
     e.preventDefault();
-    const url = `https://seeker-5fmu.vercel.app/movie/${movieName}`;
+    const url = `${API_URL}/movie/${movieName}`;
     axios
       .get(url)
       .then((response) => {
