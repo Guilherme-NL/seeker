@@ -12,7 +12,7 @@ export default function SearchForm({ setMoveInfo }) {
 
   function sendMovieName(e) {
     e.preventDefault();
-    const url = `http://localhost:4000/move/${movieName}`;
+    const url = `http://localhost:4000/movie/${movieName}`;
     console.log(url);
     axios
       .get(url)
