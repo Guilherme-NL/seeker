@@ -10,13 +10,26 @@
 .move-description {
   padding: 20px;
 
+  @media (max-width: 500px) {
+    padding: 5px;
+  }
+
   p {
     margin-bottom: 20px;
     text-align: justify;
+
+    @media (max-width: 500px) {
+      font-size: 10px;
+    }
   }
 }
 
 .poster {
   padding: 20px;
   width: 250px;
+
+  @media (max-width: 500px) {
+    width: 200px;
+    height: auto;
+  }
 }
