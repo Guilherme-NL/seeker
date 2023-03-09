@@ -39,7 +39,9 @@ export default function SearchForm({ setMoveInfo }) {
       <Button className="custom-button" submits="true">
         Search
       </Button>
-      <Button className="custom-button">Reset</Button>
+      <Button className="custom-button" onClick={() => setMoveInfo(null)}>
+        Reset
+      </Button>
     </form>
   );
 }
