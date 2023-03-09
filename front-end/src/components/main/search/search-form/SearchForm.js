@@ -7,30 +7,34 @@ import "./search-form.scss";
 import React from "react";
 import axios from "axios";
 
-export default function SearchForm() {
-  const [moveName, setMoveName] = React.useState("");
+export default function SearchForm({ setMoveInfo }) {
+  const [movieName, setMovieName] = React.useState("");
 
-  function sendMoveName(e) {
+  function sendMovieName(e) {
     e.preventDefault();
-    const url = "http://localhost:4000/";
-    const body = { moveName };
+    const url = `http://localhost:4000/move/${movieName}`;
+    console.log(url);
     axios
-      .post(url, body)
-      .then(setMoveName(""))
+      .get(url)
+      .then((response) => {
+        console.log(response);
+        setMovieName("");
+        setMoveInfo(response.data);
+      })
       .catch((err) => {
         alert(err.response);
-        setMoveName("");
+        setMovieName("");
       });
   }
 
   return (
-    <form className="search-form" onSubmit={sendMoveName}>
+    <form className="search-form" onSubmit={sendMovieName}>
       <Input
         className="custom-input"
         type="text"
         required
-        value={moveName}
-        onChange={(e) => setMoveName(e.target.value)}
+        value={movieName}
+        onChange={(e) => setMovieName(e.target.value)}
       />
       <Button className="custom-button" submits="true">
         Search
