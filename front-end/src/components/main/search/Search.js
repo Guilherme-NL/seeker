@@ -2,7 +2,7 @@ import SearchForm from "./search-form/SearchForm";
 
 import "./search.scss";
 
-export default function Search({ setMoveInfo }) {
+export default function Search() {
   return (
     <div className="container">
       <div className="app-title">
@@ -12,7 +12,7 @@ export default function Search({ setMoveInfo }) {
           favorite movies simply by providing their titles.
         </p>
       </div>
-      <SearchForm setMoveInfo={setMoveInfo} />
+      <SearchForm />
     </div>
   );
 }
